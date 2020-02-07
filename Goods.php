@@ -17,6 +17,17 @@ public function index(){
 }
 
 
+public function productShow($id){
+
+    $data['category']=$this->FirstModel->showCategory();
+	$data['product']=$this->GoodsModel->getProduct($id);
+	$data['main_content']='product';
+	$this->load->view('layout/main',$data);
+
+
+}
+
+
 
 
 
