@@ -54,16 +54,16 @@
     
     <div class="tab-cont" style="text-align: right;">
         <div  class="sign-in" style="">
-        <form>
+        <form method="post" action="<?php  echo base_url();?>User/login">
             
             <div class="form-group" >
             <label align="right" for="name">نام کاربری</label>
-                <input align="right" class="form-control" id="name">
+                <input align="right" class="form-control" id="name" type="text">
             </div>
             
             <div class="form-group">
             <label  align="right">پسورد</label>
-                <input align="right"  class="form-control form-input">
+                <input align="right"  class="form-control form-input" type="text">
             </div>
             <div class="form-group form-check">
             <label class="form-check-label">
@@ -82,45 +82,41 @@
         </div>
         
         <div class="sign-up" style="display: none">
+
+        	<form action="<?php echo base_url(); ?>User/register" method="post"> 
         <div class="form-group">
-            <label align="right">نام </label>
-            <input class="form-control">
+            <label align="right">ایمیل</label>
+            <input class="form-control" align="right" type="email" name="email">
             
-            </div>
             
-            <div class="form-group">
-            <label align="right">نام خوانوادگی </label>
-            <input class="form-control">
-            
-            </div>
             
             <div class="form-group">
             <label align="right">نام کاربری</label>
-            <input class="form-control">
+            <input class="form-control" type="text" align="right" name="username">
             
             </div>
             
             <div class="form-group">
             <label align="right">گذر واژه  </label>
-            <input class="form-control">
+            <input class="form-control" type="password" align="right" name="password">
             
             </div>
             
             <div class="form-group">
-            <label align="right">تکرار گذر واژه </label>
-            <input class="form-control">
+            <label align="right">نام و نام خوانوادگی</label>
+            <input class="form-control" type="text" align="right" name="orginal_name" >
             
             </div>
         
             
             
             <div class="form-group">
-            <button class="form-control btn btn-success">ثبت نام</button>
+            <button class="form-control btn btn-success" name="reg-button">ثبت نام</button>
             </div>
         
         
         </div>
-    
+    </form>
     
     </div>
 
