@@ -67,7 +67,7 @@
             <?php foreach ($goods as $good ):?>
             <li>
                 <div class="img" ><img class="img-fluid" src="<?php echo base_url();?>assets/img/mobile.jpg"></div>
-                <div class="product-name"><p><?php echo $good->good_name; ?></p> </div>
+                <div class="product-name"><a href="<?php echo base_url(); ?>Goods/productShow/<?php echo $good->good_id ?>" class="product-link"><p><?php echo $good->good_name; ?></p></a> </div>
                 <div class="product-price">
                 <h5 class="text-info"><b><?php echo $good->good_price; ?> </b></h5>
                 </div>
@@ -108,7 +108,7 @@
         
         
         
-        
+            <?php echo $links; ?>
         </div>
         </div>
     </div>
