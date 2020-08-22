@@ -1,13 +1,16 @@
 <?php
 
-
+ 
 class FirstModel extends CI_model{
 
-public function showCategory(){
+	public function showGlobalCategory(){
+		 return $this->db->get('global_category')->result();
+	}
 
 
-	return $this->db->get('category')->result();
-}
+
+
+
 
 
 

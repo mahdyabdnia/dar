@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
 	<title></title>
-
+  
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,34 @@
 <body>
 
 <div class="container" >
-	
+    
+<?php if(isset($_SESSION['registered'])):?>
+                <div class="col-md-12 alert alert-success" style="text-align : center;direction:rtl;">
+                    <p><?php echo $_SESSION['registered']; ?></p>   
+                </div>
+                <?php unset($_SESSION['registered']); ?>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['alredy_registered'])):?>
+                <div class="col-md-12 alert alert-danger" style="text-align : center;direction:rtl;">
+                    <p><?php echo $_SESSION['alredy_registered']; ?></p>    
+                </div>
+                <?php unset($_SESSION['alredy_registered']); ?>
+        <?php endif; ?>	
+
+
+
+        <?php if(isset($_SESSION['login_success'])):?>
+                <div class="col-md-12 alert alert-success" style="text-align : center;direction:rtl;">
+                    <p><?php echo $_SESSION['login_success']; ?></p>    
+                </div>
+               
+        <?php endif; ?>
+        <?php if(isset($_SESSION['login_failed'])):?>
+                <div class="col-md-12 alert alert-danger" style="text-align : center;direction:rtl;">
+                    <p><?php echo $_SESSION['login_failed']; ?></p> 
+                </div>
+                <?php unset($_SESSION['login_failed']); ?>
+        <?php endif; ?>
 <div class="row" >
 	
 <div class="sign-form" style="margin-left: auto;vertical-align: baseline; display: block;margin-top:10%;margin-right: auto;margin-bottom: 20%; border:solid grey 0.5px; width: 400px;height: auto;padding-right: 40px;padding-left: 40px;padding-top:60px;border-radius: 5px; "  >
@@ -58,32 +85,36 @@
             
             <div class="form-group" >
             <label align="right" for="name">نام کاربری</label>
-                <input align="right" class="form-control" id="name" type="text">
+                <input align="right" class="form-control" id="name" type="text" name="username">
             </div>
             
             <div class="form-group">
             <label  align="right">پسورد</label>
-                <input align="right"  class="form-control form-input" type="text">
+                <input align="right"  class="form-control form-input" type="password" name="password">
             </div>
-            <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox">مرا به خاطر بسپار
-                
-                </label>
             
-            </div>
             
             <div class="form-group">
-            <button class="form-control btn btn-success">ورود</button>
+            <button class="form-control btn btn-success" name="login_button">ورود</button>
             </div>
             
             
             </form>
+            <?php if(isset($_SESSION['login_success'])):?>
+                <div 
+                 style="text-align : center;direction:rtl;">
+                    <p><a href="<?php echo base_url(); ?>First">بازکشت به صفحه اصلی</a></p>    
+                </div>
+                <?php unset($_SESSION['login_success']); ?>
+        <?php endif; ?>
+
+
+
         </div>
         
         <div class="sign-up" style="display: none">
 
-        	<form action="<?php echo base_url(); ?>User/register" method="post"> 
+        	<form action="<?php echo base_url(); ?>user/register" method="post"> 
         <div class="form-group">
             <label align="right">ایمیل</label>
             <input class="form-control" align="right" type="email" name="email">
@@ -111,7 +142,7 @@
             
             
             <div class="form-group">
-            <button class="form-control btn btn-success" name="reg-button">ثبت نام</button>
+            <button class="form-control btn btn-success" name="reg_button">ثبت نام</button>
             </div>
         
         

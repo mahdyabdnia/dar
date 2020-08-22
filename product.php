@@ -4,7 +4,7 @@
     <br class="brr"/>
 
 
-    <?php foreach ($product as $pro ): ?>
+    <?php foreach ($product_result as $pro ): ?>
     <div class="product-box row" >
     <div class="col-3" >
         <br>
@@ -12,9 +12,9 @@
             <h6 class="pric-detail">قیمت محصول:<?php echo $pro->good_price ?>   </h6>
              <hr class="hr-p">
             
-            <a href="#" > <p class="foroshgah"><span class="fa fa-angle-left angle"></span>فروشنده:نام فروشنده </p></a>
+            <a href="#" > <p class="foroshgah"><span class="fa fa-angle-left angle"></span>نام فروشنده:<?php  echo $pro->seller_name;?> </p></a>
                 <hr class="hr-p">
-             <a href="#" > <p class="delivery">ارسال تا دوساعت بعد از سفارش </p></a>
+             <a href="#" > <p class="delivery">ارسال تا<?php echo $pro->del_time; ?> </p></a>
                 <hr class="hr-p">
             
             <button class="btn btn-shop" >افزودن به سبد خرید <span class="fa fa-shopping-basket"></span></button>

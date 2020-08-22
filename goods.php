@@ -1,5 +1,5 @@
 
-    
+      
     
     <div class="container-fluid container-part4">
     <div class="row row-in4">
@@ -12,7 +12,7 @@
                 <div></div>
             
             </div>
-            
+              
             <div class="op-search" >
             <h6>جستجو در نتایج</h6>
                 <div class="input-group">
@@ -64,10 +64,10 @@
         <ul>
 
 
-            <?php foreach ($goods as $good ):?>
+            <?php foreach ($good_result as $good ):?>
             <li>
                 <div class="img" ><img class="img-fluid" src="<?php echo base_url();?>assets/img/mobile.jpg"></div>
-                <div class="product-name"><a href="<?php echo base_url(); ?>Goods/productShow/<?php echo $good->good_id ?>" class="product-link"><p><?php echo $good->good_name; ?></p></a> </div>
+                <div class="product-name"><a href="<?php echo base_url(); ?>Product/index/<?php echo $good->good_id ?>" class="product-link"><p><?php echo $good->good_name; ?></p></a> </div>
                 <div class="product-price">
                 <h5 class="text-info"><b><?php echo $good->good_price; ?> </b></h5>
                 </div>
@@ -108,7 +108,6 @@
         
         
         
-            <?php echo $links; ?>
         </div>
         </div>
     </div>
