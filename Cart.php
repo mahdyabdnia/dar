@@ -2,6 +2,12 @@
 
 Class Cart extends CI_Controller{
 
+	public function index(){
+		$data['global_result']=$this->FirstModel->showGlobalCategory();
+		$data['main_content']="cart";
+		$this->load->view('layout/main',$data);
+	}
+
 
 	public function add(){
 
@@ -13,8 +19,32 @@ Class Cart extends CI_Controller{
 );
 
 	$this->cart->insert($data);
-	redirect('./First');
+	//echo $this->show_cart();
 	}
+
+
+	public function load_cart(){
+		///echo $this->show_cart();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
