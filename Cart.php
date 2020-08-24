@@ -15,7 +15,7 @@ Class Cart extends CI_Controller{
 
 		'price'=>$_POST['good_price'],
 		'name'=>$_POST['good_name'],
-		'qty'=>'1'
+		'qty'=>$_POST['quantity'],
 );
 
 	$this->cart->insert($data);

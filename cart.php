@@ -17,8 +17,8 @@
                <div class="product-img"><img src="110204720.jpg" ></div>
                <div class="product-detail">
                <h5 class="text-info">میگوی  پاک کرده 500 گرمی</h5>
-                <p class="producer"> <a href="#">دی جی کالا</a>  :تولید کننده  </p> 
-                   <p>گارانتی بر گشت کالا</p>
+               
+                  
                    
                    
                </div>
@@ -35,88 +35,18 @@
                </div>
                
                <div class="price-detail">
-               <p class="text-secondary"><del>550,000تومان </del></p>
-                   <p class="text-secondary">تخفیف:50,000</p>
-                   <p class="text-dark">مبلغ قابل پرداخت:500,000</p>
+               <p class="text-secondary"><del>قیمت : 500تومان  </del></p>
+                   
+                   <p class="text-dark">مبلغ قابل پرداخت :4000 تومان </p>
                </div>
              
              
              
              </div>
              
-                    <div class="row-box">
-             <div class="btn-close">
-               <button class="close">&times;</button>
-                 
+                    
                
-               </div>
-               
-               <div class="product-img"><img src="110204720.jpg" ></div>
-               <div class="product-detail">
-               <h5 class="text-info">میگوی  پاک کرده 500 گرمی</h5>
-                <p class="producer"> <a href="#">دی جی کالا</a>  :تولید کننده  </p> 
-                   <p>گارانتی بر گشت کالا</p>
-                   
-                   
-               </div>
-               
-               <div class="number-product">
-               <p>:تعداد</p>
-                   <select class="form-control">
-                  <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       
-                   </select>
-               
-               </div>
-               
-               <div class="price-detail">
-               <p class="text-secondary"><del>550,000تومان </del></p>
-                   <p class="text-secondary">تخفیف:50,000</p>
-                   <p class="text-dark">مبلغ قابل پرداخت:500,000</p>
-               </div>
-             
-             
-             
-             </div>
-               
-                   <div class="row-box">
-             <div class="btn-close">
-               <button class="close">&times;</button>
-                 
-               
-               </div>
-               
-               <div class="product-img"><img src="110204720.jpg" ></div>
-               <div class="product-detail">
-               <h5 class="text-info">میگوی  پاک کرده 500 گرمی</h5>
-                <p class="producer"> <a href="#">دی جی کالا</a>  :تولید کننده  </p> 
-                   <p>گارانتی بر گشت کالا</p>
-                   
-                   
-               </div>
-               
-               <div class="number-product">
-               <p>:تعداد</p>
-                   <select class="form-control">
-                  <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       
-                   </select>
-               
-               </div>
-               
-               <div class="price-detail">
-               <p class="text-secondary"><del>550,000تومان </del></p>
-                   <p class="text-secondary">تخفیف:50,000</p>
-                   <p class="text-dark">مبلغ قابل پرداخت:500,000</p>
-               </div>
-             
-             
-             
-             </div>
+                  
                
                
              </div>
