@@ -27,6 +27,15 @@ Class Cart extends CI_Controller{
 		///echo $this->show_cart();
 	}
 
+	public function remove(){
+		$row_id=$_POST['row_id'];
+		$data=array('rowid'=>$row_id,'qty'=>'0');
+		$this->cart->update($data);
+	}
+	public function clear(){
+		$this->cart->destroy();
+	}
+
 
 
 

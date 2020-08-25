@@ -7,6 +7,9 @@
            </div>
          <div class="row-product" >
            <div class="row-product-in">
+
+
+            <?php foreach($this->cart->contents() as $items): ?>
                <div class="row-box">
              <div class="btn-close">
                <button class="close">&times;</button>
@@ -16,7 +19,7 @@
                
                <div class="product-img"><img src="110204720.jpg" ></div>
                <div class="product-detail">
-               <h5 class="text-info">میگوی  پاک کرده 500 گرمی</h5>
+               <h5 class="text-info"><?php echo $items['name']; ?></h5>
                
                   
                    
@@ -25,26 +28,21 @@
                
                <div class="number-product">
                <p>:تعداد</p>
-                   <select class="form-control">
-                  <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       
-                   </select>
+                   <input type="number" name="" value="<?php echo $items['qty']; ?>">
                
                </div>
                
                <div class="price-detail">
-               <p class="text-secondary"><del>قیمت : 500تومان  </del></p>
+               <p class="text-secondary"><del>قیمت : <?php echo $items['price']; ?>تومان  </del></p>
                    
-                   <p class="text-dark">مبلغ قابل پرداخت :4000 تومان </p>
+                   <p class="text-dark">مبلغ قابل پرداخت :<?php echo $items['subtotal']; ?> تومان </p>
                </div>
              
              
              
              </div>
              
-                    
+              <?php endforeach; ?>      
                
                   
                
@@ -54,7 +52,7 @@
              <div class="price-process" style="">
              <div class="whole-price" >
               <div class="dp1">   <p class="p1" >قیمت کل</p></div>
-                <div class="dp2"> <p class="p2">500,0000تومان</p></div>
+                <div class="dp2"> <p class="p2"><?php echo $this->cart->format_number($this->cart->total()); ?>تومان</p></div>
                  </div>
                  <div class="delivery-price">
                     <div class="dp1"> <p class="p1">هزینه ارسال</p></div>
@@ -63,7 +61,7 @@
                  </div>
                  <div class="price-pay">
                      <h5 class="text-secondary">مبلغ قابل پرداخت</h5>
-                     <h5 class="text-danger">550,000  تومان</h5>
+                     <h5 class="text-danger"><?php echo $this->cart->format_number($this->cart->total()); ?>  تومان</h5>
                  </div>
                  
                  <div class="price-button">
