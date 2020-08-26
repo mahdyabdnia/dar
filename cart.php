@@ -1,9 +1,44 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".remove_cart").click(function(){
+    var row_id=$(this).attr("id");
+    $.ajax({
+         url:"<?php echo base_url(); ?>Cart/remove",
+         method:"POST",
+         data:{row_id:row_id},
+         success:function(data){
+          location.reload();
+         }
 
+
+    });
+
+  });
+
+});  
+
+
+
+
+</script>
     
+
+
+
+
+
+
+
+
+
     <div class="container-fluid container-part3">
        <div class="row row-in">
+        <?php $totalqty=0; ?>
+        <?php foreach($this->cart->contents() as $items): ?>
+          <?php $totalqty+=$items['qty']; ?>
+        <?php endforeach; ?>  
         <div class="row-up" >
-           <div><p><span class="badge badge-pill badge-secondary" >2</span>  سبد خرید </p></div>
+           <div><p><span class="badge badge-pill badge-secondary" ><?php echo $totalqty; ?></span>  سبد خرید </p></div>
            </div>
          <div class="row-product" >
            <div class="row-product-in">
@@ -12,7 +47,7 @@
             <?php foreach($this->cart->contents() as $items): ?>
                <div class="row-box">
              <div class="btn-close">
-               <button class="close">&times;</button>
+               <button class="close remove_cart" id="<?php echo $items['rowid']; ?>">&times;</button>
                  
                
                </div>
