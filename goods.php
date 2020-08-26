@@ -73,13 +73,13 @@
                 </div>
                 
                 <div class="actions" >
-                    
-                <button data-goodid="<?php echo $good->good_id; ?>" data-goodprice="<?php echo $good->good_price; ?>" data-goodname="<?php echo $good->good_name; ?>" class=" btn btn-dark" data-toggle="tooltip" name="add_cart" id="add_cart" data-placement="bottom" title="افزودن به سبد خرید"><i class="fas fa-shopping-cart" style="color: white;"></i></button>
+                  <input type="number" name="quantity" class="form-control" class="quantity" id="<?php echo $good->good_id; ?>"  data-toggle="tooltip" value="1" >   
+                <button data-goodid="<?php echo $good->good_id; ?>" data-goodprice="<?php echo $good->good_price; ?>" data-goodname="<?php echo $good->good_name; ?>" class="add_cart btn btn-dark" data-toggle="tooltip" name="add_cart" id="add_cart" data-placement="bottom" title="افزودن به سبد خرید"><i class="fas fa-shopping-cart" style="color: white;"></i></button>
 
                 <button class="btn btn-dark"><i class="fas fa-expand-arrows-alt" data-toggle="tooltip" data-placement="right" title="مشاهده نیم نگاه"></i></button>
                 
                      
-                     <input type="number" name="quantity" class="form-control"   data-toggle="tooltip">
+                    
                                 
                   
                     
@@ -91,29 +91,33 @@
             
         
        <?php endforeach; ?>
-
+       
 
        <script type="text/javascript">
+     
            $(document).ready(function(){
-            $("#add_cart").click(function(){
-                 var good_id=$(this).data("goodid");
+            $(".add_cart").click(function(){
+                var good_id=$(this).data("goodid");
                  var good_price=$(this).data("goodprice");
                  var good_name=$(this).data("goodname");
                  var quantity=$('#'+good_id).val();
 
-                 $.ajax({
+               
+                   $.ajax({
                     url:"<?php echo base_url(); ?>Cart/add",
                     method:"POST",
                     data:{good_id:good_id,good_name:good_name,good_price:good_price,quantity:quantity},
                     success:function(data){
-                        location.replace("<?php echo base_url(); ?>First");
-                    }
+                      location.reload();
+                        }
                  });
+                
+
             });
 
            });
-
-
+    
+         
        </script>
             
                 
