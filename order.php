@@ -52,15 +52,49 @@
                
                
              </div>
+
+
+            <hr style="width: 80%;height: 0.5%;border-bottom: none;border-top-color:#d1d1d1; "> 
+      
+            <div class="row-inner">
+              <h5>لیست سفارشات</h5>
+
+              <?php foreach ($this->cart->contents() as $items): ?>
+              <div class="row-outer">
+              <img src="<?php echo $items['img']; ?>
+              ">
+              <h6><?php echo $items['name']; ?></h6>
+
+              </div>
+
+            <?php endforeach; ?>
+
+
+
             
+
+
+               
+
+            </div>
            
 
            </div>
              <div style="display: flex;flex-grow: 0.5; "></div>
             <div style="display: flex;flex-grow:7.5;flex-direction: column;height: auto;">
-              <div style="display: flex;flex-direction: column;height: 300px;background-color: #ffffff;position: sticky;position: -webkit-sticky;border-width: 1px;border-color:grey;border-style: solid;">
-                
+              
+          
+            
+              <div style="display: flex;flex-direction: column;height: 300px;background-color: #ffffff;position: sticky;position: -webkit-sticky;border-width: 1px;border-color:grey;border-style: solid;justify-content:flex-end;text-align: center;">
 
+                <h5 style="margin: auto;">مبلغ کل</h5>
+               
+                <h6 style="margin: auto;"><?php echo $this->cart->format_number($this->cart->total()); ?></h6>
+
+              
+                
+ <button class="btn btn-info" style="width: 50%;margin-bottom: 30px;margin-left: auto;margin-right: auto;">ثبت نهایی </button>
+ 
 
               </div>
 
