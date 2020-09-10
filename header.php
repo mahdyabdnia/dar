@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -144,32 +144,27 @@
 <li class="nav-item dropdown  " >
 <a class="nav-link  " href="#" id="navbardrop" > <i id="span-dop" class="fa fa-caret-down"></i><?php echo $globres->global_category; ?></a>
  <ul class="dropdown-menu" id="dropdown" style="text-align: right ;background: #343A40">
-      <li> <a class="dropdown-item" href="#"> <i class=" fa fa-angle-left"></i>  لینک1 </a>
-
+  <?php foreach($branch_result as $bres): ?>
+    <?php if($globres->global_category_id==$bres->global_category_id): ?>
+      <li> <a class="dropdown-item" href="#"> <i class=" fa fa-angle-left"></i>  <?php echo $bres->branch_category; ?></a>
+         
          <ul class="dropdown-menu submenu submenu-left" id="dropdown" style="text-align: right ;background: #343A40">
-            <li class=""><a class="dropdown-item" href="">مواد  غذایی</a></li>
-
-             <li class=""><a class="dropdown-item" href="">مواد  غذایی</a></li>
-              <li class=""><a class="dropdown-item" href="">مواد  غذایی</a></li>
+          <?php foreach($category_result as $catres) :?>
+            <?php if($bres->branch_category_id==$catres->branch_category_id): ?>
+            <li class=""><a class="dropdown-item" href=""><?php echo $catres->category_name; ?></a></li>
+             <?php endif; ?>
+          <?php endforeach; ?>   
          </ul>
        
 
       </li> 
+     <?php endif; ?>
 
-
-      <li> <a class="dropdown-item" href="#"> <i class=" fa fa-angle-left"></i>  لینک1 </a>
-
-         <ul class="dropdown-menu submenu submenu-left
-         " id="dropdown" style="text-align: right ;background: #343A40">
-            <li class=""><a class="dropdown-item" href="">مواد  غذایی</a></li>
-         </ul>
-       
-
-      </li> 
+      
 
     
     
- 
+ <?php endforeach; ?>
   </ul>
    
 </li>

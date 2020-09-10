@@ -4,11 +4,13 @@ Class Cart extends CI_Controller{
 
 	public function index(){
 		$data['global_result']=$this->FirstModel->showGlobalCategory();
+$data['branch_result']=$this->FirstModel->showBranchCategory();
+$data['category_result']=$this->FirstModel->showCategory();
 		$data['main_content']="cart";
 		$this->load->view('layout/main',$data);
 	}
 
-
+   
 	public function add(){
 
 		$data=array('id'=>$_POST['good_id'],
@@ -16,6 +18,7 @@ Class Cart extends CI_Controller{
 		'price'=>$_POST['good_price'],
 		'name'=>$_POST['good_name'],
 		'qty'=>$_POST['quantity'],
+		'img'=>''
 );
 
 	$this->cart->insert($data);

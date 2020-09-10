@@ -8,6 +8,8 @@ class Goods extends CI_Controller{
 public function index(){
 	$data['good_result']=$this->GoodsModel->showAllGoods();
 $data['global_result']=$this->FirstModel->showGlobalCategory();
+$data['branch_result']=$this->FirstModel->showBranchCategory();
+$data['category_result']=$this->FirstModel->showCategory();
 
 
 
