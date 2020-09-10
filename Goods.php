@@ -6,7 +6,10 @@ class Goods extends CI_Controller{
 
 
 public function index(){
-	$data['good_result']=$this->GoodsModel->showAllGoods();
+	 $global_category_id=$this->uri->segment(3);
+	 $branch_category_id=$this->uri->segment(4);
+	 $category_id=$this->uri->segment(5);
+	$data['good_result']=$this->GoodsModel->showAllGoods($global_category_id,$branch_category_id,$category_id);
 $data['global_result']=$this->FirstModel->showGlobalCategory();
 $data['branch_result']=$this->FirstModel->showBranchCategory();
 $data['category_result']=$this->FirstModel->showCategory();

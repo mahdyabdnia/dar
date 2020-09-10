@@ -151,7 +151,7 @@
          <ul class="dropdown-menu submenu submenu-left" id="dropdown" style="text-align: right ;background: #343A40">
           <?php foreach($category_result as $catres) :?>
             <?php if($bres->branch_category_id==$catres->branch_category_id): ?>
-            <li class=""><a class="dropdown-item" href=""><?php echo $catres->category_name; ?></a></li>
+            <li class=""><a class="dropdown-item" href="<?php echo base_url(); ?>Goods/index/<?php echo $globres->global_category_id  ?>/<?php echo $bres->branch_category_id; ?>/<?php echo $catres->category_id; ?>"><?php echo $catres->category_name; ?></a></li>
              <?php endif; ?>
           <?php endforeach; ?>   
          </ul>
