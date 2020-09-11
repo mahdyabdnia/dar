@@ -439,7 +439,7 @@ border-style: solid;
     margin-right:12px;
     margin-left: 12px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     margin-top: 20px;
     background: 
 #FFFFFF}
@@ -1242,6 +1242,7 @@ display: flex;
 }
 .row-product-in .form-group{
     margin-top: 10px;
+    display: flex;
 }
 
 .row-product-in  .time-group input{
@@ -1263,18 +1264,93 @@ width: 250px;
 .row-product-in .row-inner{
     display: flex;
     flex-direction: row-reverse;
+ 
 
+}
+
+.row-product-in .row-inner h5{
+    margin-top: 20px;
+    margin-right: 20px;
+ 
 }
 
 .row-product-in .row-inner .row-outer{
     display: flex;
     flex-direction: column;
+   
 }
 
 .row-product-in .row-inner .row-outer img{
+    margin-top: 30px;
    width: 70px;
    height: 70px;
+   
 }
+
+.row-product-in .button-f input{
+   text-align: center;
+}
+
+
+.row-tab .tab-content .tab-pane h3{
+    text-align: right;
+    direction: rtl;
+}
+
+.row-tab .tab-button .open-desc{
+
+    
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 0;
+}
+.row-tab .tab-button .open-comment{
+    border-radius: 0;
+    
+   
+}
+.row-tab .tab-button{
+    display: flex;
+    flex-direction: row-reverse;
+   
+}
+
+.row-tab .tab-cont .tab-comment{
+    display: none;
+}
+
+
+.row-tab .tab-cont .tab-comment .form-satis{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-right: 120px;
+}
+
+.row-tab .tab-cont .tab-comment  .form-comment textarea{
+    width: 80%;
+    margin-right: 40px;
+    text-align: right;
+}
+.row-tab .tab-cont .tab-comment .form-satis input{
+    margin: auto;
+}
+
+.row-tab .tab-cont .tab-comment h6{
+    text-align: right;
+    margin-top: 40px;
+    margin-right:20px;
+}
+ 
+
+ .row-tab .tab-cont .tab-comment  .form-comment{
+    display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+ }
+
+
+
 
 
 

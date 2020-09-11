@@ -1,10 +1,11 @@
-
-    
+      
+     
 <div class="container-fluid container-part2">
     <br class="brr"/>
 
 
     <?php foreach ($product_result as $pro ): ?>
+
     <div class="product-box row" >
     <div class="col-3" >
         <br>
@@ -17,7 +18,7 @@
              <a href="#" > <p class="delivery">ارسال تا<?php echo $pro->del_time; ?> </p></a>
                 <hr class="hr-p">
             
-            <button class="btn btn-shop" >افزودن به سبد خرید <span class="fa fa-shopping-basket"></span></button>
+            <button class="btn btn-shop add_cart" id="add_cart" data-goodid="<?php echo $pro->good_id; ?>" data-goodprice="<?php $pro->good_price; ?>" data-goodname="<?php $pro->good_name; ?>" >افزودن به سبد خرید <span class="fa fa-shopping-basket"></span></button>
            
          
            
@@ -42,7 +43,38 @@
                    ویزگی های محصول
 
                    <li> <?php echo $pro->description; ?> </li>
-                   
+
+
+                  
+                   <script type="text/javascript">
+     
+           $(document).ready(function(){
+            $("#add_cart").click(function(){
+                var good_id=$(this).data("goodid");
+                 var good_price=$(this).data("goodprice");
+                 var good_name=$(this).data("goodname");
+                 var quantity=$('#'+good_id).val();
+
+                   $.ajax({
+                    url:"<?php echo base_url(); ?>Cart/add",
+                    method:"POST",
+                    data:{good_id:good_id,good_name:good_name,good_price:good_price,quantity:quantity},
+                    
+
+                    success:function(data){
+                      location.reload();
+                        }
+                 });
+
+
+                
+
+            });
+
+           });
+    
+         
+       </script>
                    
                 
                
@@ -50,6 +82,9 @@
                
                
                </ul>
+
+                <h5 style="margin-right: 20px;">:تعداد </h5>
+                <input type="number" name="quantity" id="<?php echo $pro->good_id; ?>" value="1" class="quantity form-input form-control" style="width: 50%;display:block;">
             
             </div>
         
@@ -92,31 +127,164 @@
 
 
   <?php endforeach; ?>
-    
-    <div class="row  row-tab" >
-    <ul class="nav nav-tabs">
-      <li class="nav-item"> <a class="nav-link " data-toggle="tab" href="#menu1">نظرات <em class="fas fa-comments"></em></a></li>
-      <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#menu2">  مشخصات   <i class="far fa-list-alt"></i></a>
-    </li>
-  </ul>
 
-  <!-- Tab panes -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="row row-tab " >
+   
+
+   <div class="tab-button" style="background-color: #e6e8e8;border-top-color: #a9abab;border-top-width: 2px;" >
+     
+     <button class="btn btn-default btn-lg open-desc"> مشخصات <i class="far fa-list-alt"></i> </button>
+     <button class="btn btn-default btn-lg open-comment">نظرات  <em class="fas fa-comment"> </em></button>
+   </div>   
+ 
+   <div class="tab-cont">
+     <div class="tab-comment container-fluid">
+      <form>
+        <h6>آیا  ار خرید این جنس رضایت داشته ایدد ؟</h6>
+        <div class="form-group form-satis" >
         
-         <div class="tab-content">
-    <div id="menu1" class="container tab-pane fade"><br>
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="menu2" class="container tab-pane active"><br>
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-        </div>
+        <label class="radio-inline" style="color: red;">نا راضی ام <input type="radio" name="satis" value="satisfy" checked></label>
+        <label class="radio-inline" style="color: green;margin-right: 10px;">راضی ام  <input type="radio" name="desatis" value="desatisfy"></label>
+
+
+      
+   </div>
+
+
+      <h6>لطفا نظر خود را در این قسمت بیان کنید </h6>
+      <div class="form-group form-comment">
+        <textarea placeholder="kjkgjfkjg" rows="6" class="form-control form-input" > </textarea>
+
+      </div> 
+
+      </form>
+      
+      
+     </div>
+
+
+     <div class="tab-desc  container-fluid">
+       
+       gfgfgfg
+     </div>
+     
+
+
+
+   </div>
  
     
     
     </div>
+
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $(".open-comment").click(function(){
+      $(this).css('background-color','white');
+      $('.open-desc').css('background-color','#e6e8e8');
+       $('.tab-comment').fadeIn();
+       $('.tab-desc').fadeOut();
+    });
+  });     
+ 
+
+    </script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('.open-desc').click(function(){
+           $(this).css('background-color','white');
+           $('.open-comment').css('background-color','#e6e8e8');
+           $('.tab-comment').fadeOut();
+       $('.tab-desc').fadeIn();
+          });
+      });
+
+
+    </script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
   <div class="row">
     <div class="col-12">
