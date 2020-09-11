@@ -126,7 +126,7 @@
     </div>
 
 
-  <?php endforeach; ?>
+ 
 
 
 
@@ -161,8 +161,13 @@
         <h6>آیا  ار خرید این جنس رضایت داشته ایدد ؟</h6>
         <div class="form-group form-satis" >
         
-        <label class="radio-inline" style="color: red;">نا راضی ام <input type="radio" name="satis" value="satisfy" checked></label>
-        <label class="radio-inline" style="color: green;margin-right: 10px;">راضی ام  <input type="radio" name="desatis" value="desatisfy"></label>
+        <label class="radio-inline" style="color: red;">نا راضی ام <input type="radio" class="satis"  name="satis" value="desatisfy" ></label>
+        <label class="radio-inline" style="color: green;margin-right: 10px;">راضی ام  <input class="satis"  type="radio" name="satis" value="satisfy"></label>
+
+
+
+
+
 
 
       
@@ -171,9 +176,14 @@
 
       <h6>لطفا نظر خود را در این قسمت بیان کنید </h6>
       <div class="form-group form-comment">
-        <textarea placeholder="kjkgjfkjg" rows="6" class="form-control form-input" > </textarea>
+        <textarea placeholder="kjkgjfkjg" rows="6" id="comment" class="form-control form-input" name="comment" > </textarea>
 
       </div> 
+
+      <div class="form-group form-sub" >
+        <input type="submit" name="submit" id="btn-sub" class="form-control btn btn-info" value="ثبت نظر " data-goodid="<?php echo $pro->good_id; ?>"data-userid="<?php echo $_SESSION['userId']; ?>">
+
+      </div>
 
       </form>
       
@@ -194,6 +204,16 @@
     
     
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <script type="text/javascript">
   $(document).ready(function(){
@@ -231,6 +251,7 @@
 
 
 
+ <?php endforeach; ?>
 
 
 
@@ -249,8 +270,28 @@
 
 
 
+<script type="text/javascript">
+$(document).ready(function(){
+$('#btn-sub').click(function(){
+  var good_id=$(this).data("goodid");
+  var user_id=$(this).data("userid");
+  var comment=$('#comment').val();
+  var comment_state=$('.satis:checked').val();
+  $.ajax({
+    url:"<?php echo base_url(); ?>Product/toComment",
+    method:'POST',
+    data:{good_id:good_id,user_id:user_id,comment:comment,comment_state:comment_state},
+    success:function(data){
+      alert("نظر شما با موفقیت ثبت شد");
+      location.reload();
+    }
+  });
+})
+});  
 
 
+
+</script>
 
 
 

@@ -1350,7 +1350,19 @@ width: 250px;
  }
 
 
+.row-tab .tab-cont .tab-comment .form-sub{
+display: flex;
+flex-direction: row-reverse;
+justify-content: center;
 
+margin-top: 40px;
+}
+
+
+.row-tab .tab-cont .tab-comment .form-sub input{
+    width: 30%;
+
+}
 
 
 
