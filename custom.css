@@ -1309,6 +1309,11 @@ width: 250px;
     
    
 }
+
+.row-tab .tab-button .show-comment{
+    border-radius: 0;
+    margin-right: 20px;
+}
 .row-tab .tab-button{
     display: flex;
     flex-direction: row-reverse;
@@ -1340,6 +1345,11 @@ width: 250px;
     text-align: right;
     margin-top: 40px;
     margin-right:20px;
+}
+
+.row-tab .tab-cont .tab-show{
+    text-align: right;
+     margin:auto;
 }
  
 
