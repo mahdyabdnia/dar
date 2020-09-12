@@ -153,6 +153,7 @@
      
      <button class="btn btn-default btn-lg open-desc"> مشخصات <i class="far fa-list-alt"></i> </button>
      <button class="btn btn-default btn-lg open-comment">نظرات  <em class="fas fa-comment"> </em></button>
+     <button class="btn btn-default btn-lg show-comment" data-goodid="<?php echo $pro->good_id; ?>">مشاهده نظرات   </button>
    </div>   
  
    <div class="tab-cont">
@@ -195,6 +196,55 @@
        
        gfgfgfg
      </div>
+
+
+     <div class="tab-show container-fluid">
+      <hr/>
+      <div class="tab-show1"></div>
+
+      
+       
+
+
+
+
+
+     </div>
+
+
+     <script type="text/javascript">
+       $(document).ready(function(){
+         $('.show-comment').click(function(){
+          var good_id=$(this).data('goodid');
+          $.ajax({
+            url:"<?php echo base_url(); ?>Product/showComment",
+            dataType:'json',
+            async:'true',
+            method:'POST',
+            data:{good_id:good_id},
+            success:function(data){
+              var html='';
+              var i=0;
+              for(i=0;i<data.length;i++){
+                html+='<h6>'+data[i].username+'نام  کاربری  </h6><h6>وضعیت رضایت  '+data[i].comment_state+'</h6><h6>نظر کاربر</h6><p>'+data[i].comment+'</p><hr/>';
+              }
+              $('.tab-show1').html(html);
+
+            }
+
+
+
+
+
+
+
+          });
+
+          return false;
+         })
+       });
+
+     </script>
      
 
 
@@ -220,8 +270,10 @@
     $(".open-comment").click(function(){
       $(this).css('background-color','white');
       $('.open-desc').css('background-color','#e6e8e8');
+       $('.show-comment').css('background-color','#e6e8e8');
        $('.tab-comment').fadeIn();
        $('.tab-desc').fadeOut();
+       $('.tab-show').fadeOut();
     });
   });     
  
@@ -234,10 +286,29 @@
           $('.open-desc').click(function(){
            $(this).css('background-color','white');
            $('.open-comment').css('background-color','#e6e8e8');
+           $('.tab-show').fadeOut();
            $('.tab-comment').fadeOut();
        $('.tab-desc').fadeIn();
           });
       });
+
+
+    </script>
+
+    <script type="text/javascript">
+       
+$(document).ready(function(){
+  $('.show-comment').click(function(){
+  $(this).css('background-color','white');
+  $('.open-comment').css('background-color','#e6e8e8');
+  $('.open-desc').css('background-color','#e6e8e8');
+  $('.tab-desc').fadeOut();
+  $('.tab-show').fadeIn();
+  $('.tab-comment').fadeOut();
+  });
+
+});
+
 
 
     </script>
