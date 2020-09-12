@@ -42,6 +42,24 @@ public function productShow($id){
 }
 
 
+public function search(){
+	if($_SERVER['REQUEST_METHOD']=="POST"){
+		if(isset($_POST['search_button'])){
+			$data['global_result']=$this->FirstModel->showGlobalCategory();
+$data['branch_result']=$this->FirstModel->showBranchCategory();
+$data['category_result']=$this->FirstModel->showCategory();
+
+			$word=$_POST['word_key'];
+			$data['good_result']=$this->GoodsModel->search($word);
+			$data['main_content']='goods';
+			$this->load->view('layout/main',$data);
+
+
+		}
+	}
+}
+
+
 
 
 

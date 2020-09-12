@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+   <!DOCTYPE html>   
 <html>
 <head>
     <title></title>
@@ -25,9 +25,11 @@
 <header>
 <div>
 <a class="logo-link" href="#"><img src="Untit-5.jpg" width="200" height="80" class="img-fluid" alt=""></a>
+<form method="post" action="<?php echo base_url(); ?>Goods/search " >
+<input type="text" name="word_key" class="search-bar" placeholder="نام برند و کالا را وارد کنید " >
+<button name="search_button" class="search-btn btn btn-dark"><i class="fa fa-search"></i></button>
 
-<input type="text" class="search-bar" placeholder="نام برند و کالا را وارد کنید " >
-<button class="search-btn btn btn-dark"><i class="fa fa-search"></i></button>
+</form>
 <?php $totalqty=0; ?>
         <?php foreach($this->cart->contents() as $items): ?>
           <?php $totalqty+=$items['qty']; ?>
