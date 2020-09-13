@@ -18,7 +18,7 @@ $(document).ready(function(){
 });  
 
 
-
+  
 
 </script>
     
@@ -32,11 +32,17 @@ $(document).ready(function(){
 
 
     <div class="container-fluid container-part3">
+
+
        <div class="row row-in">
         <?php $totalqty=0; ?>
         <?php foreach($this->cart->contents() as $items): ?>
           <?php $totalqty+=$items['qty']; ?>
         <?php endforeach; ?>  
+
+      <?php if($totalqty==0): ?>
+        <h6>سبد خالی است !موردی برای نمایش وجود ندارد</h6>
+        <?php else: ?>
         <div class="row-up" >
            <div><p><span class="badge badge-pill badge-secondary" ><?php echo $totalqty; ?></span>  سبد خرید </p></div>
            </div>
@@ -52,9 +58,10 @@ $(document).ready(function(){
                
                </div>
                
-               <div class="product-img"><img src="110204720.jpg" ></div>
+               <div class="product-img1"><img src="<?php echo base_url(); ?>assets/img/meigo.jpg" ></div>
+               <div>
                <div class="product-detail">
-               <h5 class="text-info"><?php echo $items['name']; ?></h5>
+               <h5 class="text-info" title="<?php echo $items['name']; ?>" data-placement="bottom" data-toggle="tooltip"><?php echo substr($items['name'],0,50) ; ?></h5>
                
                   
                    
@@ -63,9 +70,10 @@ $(document).ready(function(){
                
                <div class="number-product">
                <p>:تعداد</p>
-                   <input type="number" name="" value="<?php echo $items['qty']; ?>">
+                   <input type="number" class="form-control" style="width: 100px;"name="" value="<?php echo $items['qty']; ?>">
                
                </div>
+             </div>
                
                <div class="price-detail">
                <p class="text-secondary"><del>قیمت : <?php echo $items['price']; ?>تومان  </del></p>
@@ -98,19 +106,41 @@ $(document).ready(function(){
                      <h5 class="text-secondary">مبلغ قابل پرداخت</h5>
                      <h5 class="text-danger"><?php echo $this->cart->format_number($this->cart->total()); ?>  تومان</h5>
                  </div>
-                 
+                 <form action="<?php echo base_url(); ?>Order/orderPage" method="post">
                  <div class="price-button">
-                 <button type="button" class="btn btn-info">ادامه فرایند پرداخت</button>
+                 <button type="button" name="nextorder" class="nextorder btn btn-info">ادامه فرایند پرداخت</button>
                  
-                 </div>
+                 </div></form>
              
              </div>
+
+             <script type="text/javascript">
+               $(document).ready(function(){
+                 $(".nextorder").click(function(){
+                  $.ajax({
+                    url:"<?php echo base_url(); ?>Order/orderPage",
+                    method:"POST",
+                    data:{},
+                    success:function(data){
+                     location.replace("<?php echo base_url(); ?>Order");
+                    }
+                    
+
+                  });
+                 });
+
+               });
+
+             </script>
+
              
              
              
              
            
            </div>
+
+         <?php endif; ?>
         
         </div>
         

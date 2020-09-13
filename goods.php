@@ -26,21 +26,14 @@
             
             <div class="op-switch">
             <div class="custom-control custom-switch">
-      <input type="checkbox" class="custom-control-input" id="switch1" name="example">
+      <input type="checkbox" class="custom-control-input" id="switch1" name="example" value="موجود">
       <label class="custom-control-label" for="switch1">اجناس موجود</label>
                 
     </div>
             </div>
             
             
-                  <div class="op-switch">
-            <div class="custom-control custom-switch">
-      <input type="checkbox" class="custom-control-input" id="switch1" name="example">
-      <label class="custom-control-label" for="switch1">کالاهای اماده ارسال</label>
-                
-    </div>
-            </div>
-            
+                  
             <div class="price-between" >
                 <div><p> محدوده قیمت</p></div>
                 <div>
@@ -67,13 +60,13 @@
             <?php foreach ($good_result as $good ):?>
             <li>
                 <div class="img" ><img class="img-fluid" src="<?php echo base_url();?>assets/img/mobile.jpg"></div>
-                <div class="product-name"><a href="<?php echo base_url(); ?>Product/index/<?php echo $good->good_id ?>" class="product-link"><p><?php echo $good->good_name; ?></p></a> </div>
+                <div class="product-name"><a href="<?php echo base_url(); ?>Product/index/<?php echo $good->good_id ?>" class="product-link"><p title="<?php echo $good->good_name; ?>" data-toggle="tooltip" data-placement="bottom"><?php echo substr($good->good_name, 0,40); ?></p></a> </div>
                 <div class="product-price">
                 <h5 class="text-info"><b><?php echo $good->good_price; ?> </b></h5>
                 </div>
                 
                 <div class="actions" >
-                  <input type="number" name="quantity" class="form-control" class="quantity" id="<?php echo $good->good_id; ?>"  data-toggle="tooltip" value="1" >   
+                  <input type="number" name="quantity" min="1" min="1000" class="form-control" class="quantity" id="<?php echo $good->good_id; ?>"  data-toggle="tooltip" value="1" >   
                 <button data-goodid="<?php echo $good->good_id; ?>" data-goodprice="<?php echo $good->good_price; ?>" data-goodname="<?php echo $good->good_name; ?>" class="add_cart btn btn-dark" data-toggle="tooltip" name="add_cart" id="add_cart" data-placement="bottom" title="افزودن به سبد خرید"><i class="fas fa-shopping-cart" style="color: white;"></i></button>
 
                 <button class="btn btn-dark"><i class="fas fa-expand-arrows-alt" data-toggle="tooltip" data-placement="right" title="مشاهده نیم نگاه"></i></button>
