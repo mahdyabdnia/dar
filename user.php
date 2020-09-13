@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-	<title></title>
+	<title></title>   
   
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +37,8 @@
 
         <?php if(isset($_SESSION['login_success'])):?>
                 <div class="col-md-12 alert alert-success" style="text-align : center;direction:rtl;">
-                    <p><?php echo $_SESSION['login_success']; ?></p>    
+                    <p><?php echo $_SESSION['login_success']; ?></p>   
+                     
                 </div>
                
         <?php endif; ?>
@@ -103,12 +104,20 @@
             <?php if(isset($_SESSION['login_success'])):?>
                 <div 
                  style="text-align : center;direction:rtl;">
-                    <p><a href="<?php echo base_url(); ?>First">بازکشت به صفحه اصلی</a></p>    
+                    <p><a onclick="goback()">برگشت به صفحه قبل</a></p>    
                 </div>
+
+
                 <?php unset($_SESSION['login_success']); ?>
         <?php endif; ?>
 
+         <script type="text/javascript">
+              function goback(){
+                window.history.go(-2);
+              }
 
+
+         </script>
 
         </div>
         

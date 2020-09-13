@@ -47,7 +47,7 @@ $(document).ready(function(){
            <div><p><span class="badge badge-pill badge-secondary" ><?php echo $totalqty; ?></span>  سبد خرید </p></div>
            </div>
          <div class="row-product" >
-           <div class="row-product-in">
+           <div class="row-product-in" >
 
 
             <?php foreach($this->cart->contents() as $items): ?>
