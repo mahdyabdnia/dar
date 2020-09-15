@@ -3,9 +3,9 @@
 class Order extends CI_Controller{
 
 	public function index(){
-		$data['global_result']=$this->FirstModel->showGlobalCategory();
-$data['branch_result']=$this->FirstModel->showBranchCategory();
-$data['category_result']=$this->FirstModel->showCategory();
+		$data['global_result']=$this->HomeModel->showGlobalCategory();
+$data['branch_result']=$this->HomeModel->showBranchCategory();
+$data['category_result']=$this->HomeModel->showCategory();
 		$data['main_content']='order';
 		$this->load->view('layout/main',$data);
 	}
@@ -43,7 +43,7 @@ public function addOrder($user_id){
 
 			}
 			if($this->OrderModel->insertOrder($data)){
-				redirect('/First');
+				redirect('/Home');
 			}
 
 

@@ -1,11 +1,11 @@
-      
+        
      
 <div class="container-fluid container-part2">
     <br class="brr"/>
 
 
     <?php foreach ($product_result as $pro ): ?>
-
+<?php echo $pro->good_id; ?>
     <div class="product-box row" >
     <div class="col-3" >
         <br>
@@ -17,8 +17,10 @@
                 <hr class="hr-p">
              <a href="#" > <p class="delivery">ارسال تا<?php echo $pro->del_time; ?> </p></a>
                 <hr class="hr-p">
-            
-            <button class="btn btn-shop add_cart" id="add_cart" data-goodid="<?php echo $pro->good_id; ?>" data-goodprice="<?php $pro->good_price; ?>" data-goodname="<?php $pro->good_name; ?>" >افزودن به سبد خرید <span class="fa fa-shopping-basket"></span></button>
+           
+               
+            <button class="btn btn-shop add_cart" id="add_cart" data-goodid="<?php echo $pro->good_id; ?>" 
+              data-goodprice="<?php echo  $pro->good_price; ?>" data-goodname="<?php echo $pro->good_name; ?>" >افزودن به سبد خرید <span class="fa fa-shopping-basket"></span></button>
            
          
            
@@ -46,35 +48,7 @@
 
 
                   
-                   <script type="text/javascript">
-     
-           $(document).ready(function(){
-            $("#add_cart").click(function(){
-                var good_id=$(this).data("goodid");
-                 var good_price=$(this).data("goodprice");
-                 var good_name=$(this).data("goodname");
-                 var quantity=$('#'+good_id).val();
-
-                   $.ajax({
-                    url:"<?php echo base_url(); ?>Cart/add",
-                    method:"POST",
-                    data:{good_id:good_id,good_name:good_name,good_price:good_price,quantity:quantity},
-                    
-
-                    success:function(data){
-                      location.reload();
-                        }
-                 });
-
-
-                
-
-            });
-
-           });
-    
-         
-       </script>
+                  
                    
                 
                
@@ -82,10 +56,10 @@
                
                
                </ul>
-
-                <h5 style="margin-right: 20px;">:تعداد </h5>
-                <input type="number" name="quantity" id="<?php echo $pro->good_id; ?>" value="1" class="quantity form-input form-control" style="width: 50%;display:block;">
-            
+               <div style="display: flex;flex-direction: column;align-items: flex-end;">
+  <h5 style="margin-right: 20px;">:تعداد </h5>
+                <input type="number" min="1" name="quantity" id="<?php echo $pro->good_id; ?>" value="1" class="quantity form-input form-control" style="width: 50%;display:block;margin-right: 40px;">
+            </div>
             </div>
         
         
@@ -131,7 +105,35 @@
 
 
 
+ <script type="text/javascript">
+     
+           $(document).ready(function(){
+            $(".add_cart").click(function(){
+                var good_id=$(this).data("goodid");
+                 var good_price=$(this).data("goodprice");
+                 var good_name=$(this).data("goodname");
+                 var quantity=$('#'+good_id).val();
 
+                   $.ajax({
+                    url:"<?php echo base_url(); ?>Cart/add",
+                    method:"POST",
+                    data:{good_id:good_id,good_name:good_name,good_price:good_price,quantity:quantity},
+                    
+
+                    success:function(data){
+                      window.history.back();
+                        }
+                 });
+
+
+                
+
+            });
+
+           });
+    
+         
+       </script>
 
 
 

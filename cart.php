@@ -9,7 +9,7 @@ $(document).ready(function(){
          success:function(data){
           location.reload();
          }
-
+    
 
     });
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
 
             <?php foreach($this->cart->contents() as $items): ?>
-               <div class="row-box">
+               <div class="row-box" style="display: flex;flex-direction: row-reverse;">
              <div class="btn-close">
                <button class="close remove_cart" id="<?php echo $items['rowid']; ?>">&times;</button>
                  
@@ -59,7 +59,7 @@ $(document).ready(function(){
                </div>
                
                <div class="product-img1"><img src="<?php echo base_url(); ?>assets/img/meigo.jpg" ></div>
-               <div>
+               <div style="display: flex;flex-direction: column;flex-grow: 10;align-items: flex-end;">
                <div class="product-detail">
                <h5 class="text-info" title="<?php echo $items['name']; ?>" data-placement="bottom" data-toggle="tooltip"><?php echo substr($items['name'],0,50) ; ?></h5>
                
@@ -75,7 +75,7 @@ $(document).ready(function(){
                </div>
              </div>
                
-               <div class="price-detail">
+               <div class="price-detail" style="display: flex;flex-direction: column;align-items: flex-end;flex-grow: 5;">
                <p class="text-secondary"><del>قیمت : <?php echo $items['price']; ?>تومان  </del></p>
                    
                    <p class="text-dark">مبلغ قابل پرداخت :<?php echo $items['subtotal']; ?> تومان </p>

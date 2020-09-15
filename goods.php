@@ -59,7 +59,7 @@
 
             <?php foreach ($good_result as $good ):?>
             <li>
-                <div class="img" ><img class="img-fluid" src="<?php echo base_url();?>assets/img/mobile.jpg"></div>
+                <div class="img" ><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/<?php echo $good->good_img; ?>"></div>
                 <div class="product-name"><a href="<?php echo base_url(); ?>Product/index/<?php echo $good->good_id ?>" class="product-link"><p title="<?php echo $good->good_name; ?>" data-toggle="tooltip" data-placement="bottom"><?php echo substr($good->good_name, 0,40); ?></p></a> </div>
                 <div class="product-price">
                 <h5 class="text-info"><b><?php echo $good->good_price; ?> </b></h5>

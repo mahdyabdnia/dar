@@ -1,11 +1,11 @@
 <?php 
-
+   
 Class Cart extends CI_Controller{
 
 	public function index(){
-		$data['global_result']=$this->FirstModel->showGlobalCategory();
-$data['branch_result']=$this->FirstModel->showBranchCategory();
-$data['category_result']=$this->FirstModel->showCategory();
+		$data['global_result']=$this->HomeModel->showGlobalCategory();
+$data['branch_result']=$this->HomeModel->showBranchCategory();
+$data['category_result']=$this->HomeModel->showCategory();
 		$data['main_content']="cart";
 		$this->load->view('layout/main',$data);
 	}
@@ -21,7 +21,9 @@ $data['category_result']=$this->FirstModel->showCategory();
 		'img'=>''
 );
 
-	$this->cart->insert($data);
+	if($this->cart->insert($data)){
+		return true;
+	}
 	//echo $this->show_cart();
 	}
 
