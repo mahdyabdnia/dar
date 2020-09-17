@@ -84,62 +84,22 @@
     <div class="carousel-container">
     <div class="carousel-inner">
       <div class="track">
-
-
+      
+      <?php foreach ($heavy_result as $ch): ?>
         <div class="card-container">
           <div class="card">
             <div class="img img-box">
-              <img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg">
+              <img class="img-fluid" src="<?php echo base_url(); ?>assets/img/<?php echo $ch->good_img; ?>">
             </div>
           
             <div class="info">
-              Title 1
+             <?php echo $ch->good_name; ?>
             </div>
           </div>
         </div>
+     <?php endforeach; ?>
 
-
-        <div class="card-container">
-          <div class="card">
-            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
-            <div class="info">
-              Title 2
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card-container">
-          <div class="card">
-            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
-            <div class="info">
-              Title 3
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card-container">
-          <div class="card">
-            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
-            <div class="info">
-              Title 1
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card-container">
-          <div class="card">
-            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
-            <div class="info">
-              Title 1
-            </div>
-          </div>
-        </div>
-
-
-     
+        
       </div>
     </div>
     <div class="nav">
@@ -149,6 +109,46 @@
         </i>
       </button>
       <button class="next">
+        <i class="material-icons">
+        keyboard_arrow_right
+        </i>
+      </button>
+    </div>
+  </div>
+
+  <br/>
+  <br/>
+
+
+
+  <div class="carousel-container1">
+    <div class="carousel-inner1">
+      <div class="track1">
+      
+      <?php foreach ($cheap_result as $ch): ?>
+        <div class="card-container1">
+          <div class="card1">
+            <div class="img-box img1">
+              <img class="img-fluid" src="<?php echo base_url(); ?>assets/img/<?php echo $ch->good_img; ?>">
+            </div>
+          
+            <div class="info1">
+             <?php echo $ch->good_name; ?>
+            </div>
+          </div>
+        </div>
+     <?php endforeach; ?>
+
+        
+      </div>
+    </div>
+    <div class=" nav1">
+      <button class="prev1">
+        <i class="material-icons">
+        keyboard_arrow_left
+        </i>
+      </button>
+      <button class="next1">
         <i class="material-icons">
         keyboard_arrow_right
         </i>
@@ -243,6 +243,93 @@
 
   </style>
 
+  <style>
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.carousel-container1 {
+  width: 1280px;
+  margin: 50px auto;
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container1 {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container1 {
+    width: 85%;
+  }
+}
+.carousel-container1 .carousel-inner1 {
+  overflow: hidden;
+}
+.carousel-container1 .track1 {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container1 .card-container1 {
+  width: 259px;
+  flex-shrink: 0;
+  height: 300px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container1 .card-container1 .card1{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.nav1 button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.nav1 .prev1 {
+  left: -30px;
+  display: none;
+}
+.nav1 .prev1 .show1{
+  display: block;
+}
+.nav1 .next1 {
+  right: -30px;
+}
+.nav1 .next1 .hide1 {
+  display: none;
+}
+
+.card1 > * {
+  flex: 1;
+}
+.card1 .img1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.card1 .info1 {
+  flex-basis: 40px;
+  background: #fff;
+  color: #000;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+  </style>
+
   <script type="text/javascript">
     
 const prev  = document.querySelector('.prev');
@@ -281,6 +368,43 @@ prev.addEventListener('click', () => {
 
   </script>
 
+<script type="text/javascript">
+    
+const prev1  = document.querySelector('.prev1');
+const next1 = document.querySelector('.next1');
+
+const track1 = document.querySelector('.track1');
+
+let carouselWidth1 = document.querySelector('.carousel-container1').offsetWidth;
+
+window.addEventListener('resize', () => {
+  carouselWidth1 = document.querySelector('.carousel-container1').offsetWidth;
+})
+
+let index1 = 0;
+
+next1.addEventListener('click', () => {
+  index1++;
+  prev1.classList.add('show1');
+  track1.style.transform = `translateX(-${index1 * carouselWidth1}px)`;
+  
+  if (track1.offsetWidth - (index1 * carouselWidth1) < carouselWidth1) {
+    next1.classList.add('hide1');
+  }
+})
+
+prev1.addEventListener('click', () => {
+  index1--;
+  next1.classList.remove('hide');
+  if (index1 === 0) {
+    prev1.classList.remove('show');
+  }
+  track1.style.transform = `translateX(-${index1 * carouselWidth1}px)`;
+})
+
+
+
+  </script>
 
 </div>
 
