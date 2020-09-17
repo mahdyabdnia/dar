@@ -1,5 +1,5 @@
  
-
+  
  
 
 
@@ -58,205 +58,7 @@
 
 </div>
 
-<div class="row">
-    <div class="col-12">
-<div class="carousel slide carousel2" id="carousel2" data-ride="carousel" data-interval="100000000" style="">
-    <div class="carousel-header " >
-        <div class="col-10"><h5>hgh</h5><hr/></div>
-        <div class="col-2" ><h5>برگزیده ها </h5><hr/></div>
-        
-    
-    
-    
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active"  >
-            <div class="row" >
-                <div class="col-1"></div>
-            <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                      </div></a>
-            </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                       </div></a>
-            </div>
-                    <div class="col-md clc" ><a  href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                        </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                        </div></a>
-            </div>
-                
-                <div class="col-1"></div>
-                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            
-                 
-                
-            </div>
-        </div>
-        <div class="carousel-item"  >
-          <div class="row" >
-           <div class="col-1"></div>
-            <div class="col-md clc"  >
-                <a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                    </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-            </div></a>
-                      </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                       </div></a>
-            </div>
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                        </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="<?php echo base_url(); ?>assets/img/c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                        </div></a>
-            </div>
-                
-                <div class="col-sm-1"></div>
-                
-            </div>
-        
-        </div>
-        
-    
-    </div>
-    
-    <a class="carousel-control-prev carousel-prev-2" data-slide="prev" href="#carousel2" role="button">
-    <i class="fas fa-angle-left ca-ic-pr" ></i>
-    <span class="sr-only">Prev</span>    
-    
-    </a>
-    <a class= "carousel-control-next carousel-next-2" data-slide="next" href="#carousel2" role="button">
-    <i class="fas fa-angle-right ca-ic-ne" aria-hidden="true"></i>
-        <span class="sr-only">Next</span>
-    </a>
-    
-    </div>
-        <br/>
-        
-    </div>
-    </div>
+
     
     
     <div class="row brand"  >
@@ -277,345 +79,207 @@
     
     </div>
     
-    <div class="row">
-    <div class="col-12">
-<div class="carousel slide carousel2" id="carousel3" data-ride="carousel" data-interval="100000000" style="">
-    <div class="carousel-header " >
-        <div class="col-10"><h5>hgh</h5><hr/></div>
-        <div class="col-2" ><h5>برگزیده ها </h5><hr/></div>
-        
     
     
-    
-    </div>
+    <div class="carousel-container">
     <div class="carousel-inner">
-        <div class="carousel-item active"  >
-            <div class="row" >
-                <div class="col-1"></div>
-            <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                  </div></a>
-            </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                   </div></a>
-            </div>
-                    <div class="col-md clc" ><a  href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                    </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                    </div></a>
-            </div>
-                
-                <div class="col-1"></div>
-                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            
-                 
-                
-            </div>
-        </div>
-        <div class="carousel-item"  >
-          <div class="row" >
-           <div class="col-1"></div>
-            <div class="col-md clc"  >
-                <a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-            </div></a>
-              </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                   </div></a>
-            </div>
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                    </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="c.jpg">
-                 </div>
-                  
-                  <div class="thumb-content">
-                     <h6> گوشی  موبایل  سامسونگ  مدل   <br/>  دو سیم کارتهglaxy note 1 </h6>
-                      <h4 class="text-danger">  2,224,000 تومان</h4>
-                  
-                  </div>
-                    </div></a>
-            </div>
-                
-                <div class="col-sm-1"></div>
-                
-            </div>
-        
-        </div>
-        
-    
-    </div>
-    <a class="carousel-control-prev carousel-prev-2" data-slide="prev" href="#carousel3" role="button"> <em class="fas fa-angle-left ca-ic-pr"></em> <span class="sr-only">Prev</span> </a> <a class="carousel-control-next carousel-next-2" data-slide="next" href="#carousel3" role="button"> <em class="fas fa-angle-right ca-ic-ne" aria-hidden="true"></em> <span class="sr-only">Next</span> </a></div>
-        <br/>
-        
-    </div>
-    </div>
-    
-    <div class="row">
-    <div class="col-12">
-<div class="carousel slide carousel2" id="carousel4" data-ride="carousel" data-interval="100000000" style="">
-    <div class="carousel-header " >
-        <div class="col-10"><h5>hgh</h5><hr/></div>
-        <div class="col-2" ><h5>تولید کننده برتر </h5><hr/></div>
-        
-    
-    
-    
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active"  >
-            <div class="row" >
-                <div class="col-1"></div>
-            <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1076.png">
-                 </div>
-                  
-                  
-                </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1078.png">
-                 </div>
-                  
-                 
-                  </div></a>
-            </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1079.png">
-                 </div>
-                  
-                  
-                   </div></a>
-            </div>
-                    <div class="col-md clc" ><a  href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1080.png">
-                 </div>
-                  
-                 
-                    </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1081.png">
-                 </div>
-                  
-                  
-                    </div></a>
-            </div>
-                
-                <div class="col-1"></div>
-                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            
-                 
-                
-            </div>
-        </div>
-        <div class="carousel-item"  >
-          <div class="row" >
-           <div class="col-1"></div>
-            <div class="col-md clc"  >
-                <a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1076.png">
-                 </div>
-                  
-                
-                </div></a>
-            </div>
-                
-                  <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1078.png">
-                 </div>
-                  
-                 
-            </div></a>
-              </div>
-                
-                   <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1079.png">
-                 </div>
-                  
-                
-                   </div></a>
-            </div>
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1080.png">
-                 </div>
-                  
-                
-                    </div></a>
-            </div>
-                
-                    <div class="col-md clc" ><a href="#">
-              <div class="thumb-wrapper">
-                 <div class="img-box">
-                    <img class="img-fluid " src="1081.png">
-                 </div>
-                  
-                  
-                        </div></a>
-            </div>
-                
-                <div class="col-sm-1"></div>
-                
-            </div>
-        
-        </div>
-        
-    
-    </div>
-    <a class="carousel-control-prev carousel-prev-2" data-slide="prev" href="#carousel4" role="button"> <em class="fas fa-angle-left ca-ic-pr"></em> <span class="sr-only">Prev</span> </a> <a class="carousel-control-next carousel-next-2" data-slide="next" href="#carousel4" role="button"> <em class="fas fa-angle-right ca-ic-ne" aria-hidden="true"></em> <span class="sr-only">Next</span> </a></div>
-        <br/>
-        
-    </div>
-    </div>
-    
+      <div class="track">
 
+
+        <div class="card-container">
+          <div class="card">
+            <div class="img img-box">
+              <img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg">
+            </div>
+          
+            <div class="info">
+              Title 1
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
+            <div class="info">
+              Title 2
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
+            <div class="info">
+              Title 3
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
+            <div class="info">
+              Title 1
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="img img-box"><img class="img-fluid" src="<?php echo base_url(); ?>assets/img/c.jpg"></div>
+            <div class="info">
+              Title 1
+            </div>
+          </div>
+        </div>
+
+
+     
+      </div>
+    </div>
+    <div class="nav">
+      <button class="prev">
+        <i class="material-icons">
+        keyboard_arrow_left
+        </i>
+      </button>
+      <button class="next">
+        <i class="material-icons">
+        keyboard_arrow_right
+        </i>
+      </button>
+    </div>
+  </div>
+    
+ <style>
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.carousel-container {
+  width: 1280px;
+  margin: 50px auto;
+  min-height: 200px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel-container {
+    width: 85%;
+  }
+}
+.carousel-container .carousel-inner {
+  overflow: hidden;
+}
+.carousel-container .track {
+  display: inline-flex;
+  transition: transform 0.5s;
+}
+.carousel-container .card-container {
+  width: 259px;
+  flex-shrink: 0;
+  height: 300px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.carousel-container .card-container .card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.nav button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.nav .prev {
+  left: -30px;
+  display: none;
+}
+.nav .prev.show {
+  display: block;
+}
+.nav .next {
+  right: -30px;
+}
+.nav .next.hide {
+  display: none;
+}
+
+.card > * {
+  flex: 1;
+}
+.card .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.card .info {
+  flex-basis: 40px;
+  background: #fff;
+  color: #000;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+  </style>
+
+  <script type="text/javascript">
+    
+const prev  = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+const track = document.querySelector('.track');
+
+let carouselWidth = document.querySelector('.carousel-container').offsetWidth;
+
+window.addEventListener('resize', () => {
+  carouselWidth = document.querySelector('.carousel-container').offsetWidth;
+})
+
+let index = 0;
+
+next.addEventListener('click', () => {
+  index++;
+  prev.classList.add('show');
+  track.style.transform = `translateX(-${index * carouselWidth}px)`;
+  
+  if (track.offsetWidth - (index * carouselWidth) < carouselWidth) {
+    next.classList.add('hide');
+  }
+})
+
+prev.addEventListener('click', () => {
+  index--;
+  next.classList.remove('hide');
+  if (index === 0) {
+    prev.classList.remove('show');
+  }
+  track.style.transform = `translateX(-${index * carouselWidth}px)`;
+})
+
+
+
+  </script>
 
 
 </div>
